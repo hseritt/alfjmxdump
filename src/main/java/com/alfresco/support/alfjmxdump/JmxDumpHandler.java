@@ -19,7 +19,7 @@ public class JmxDumpHandler {
 		
 		if (option.equals("metadata")) {
 			
-			template.put("Alfresco Version", 			"VersionNumber");
+			template.put("Alfresco Version", 			"appliedToServer");
 			template.put("JVM Version", 				"java.runtime.version  ");
 			template.put("OS Name", 					"os.name  ");
 			template.put("OS Version", 					"os.version  ");
