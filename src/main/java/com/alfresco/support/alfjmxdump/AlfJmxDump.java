@@ -26,8 +26,10 @@ public class AlfJmxDump {
 		System.out.println(" java -jar alfjmxdump.jar [jmx dump file] [option]");
 		System.out.println("");
 		System.out.println("Available Options: ");
-		System.out.println(" metadata:  General Alfresco settings, JVM settings, machine, etc.");
-		System.out.println(" auth|sync: Authentication and synchronization settings.");
+		System.out.println(" auth|sync:    Authentication and synchronization settings.");
+		System.out.println(" cache:        Cache settings.");
+		System.out.println(" metadata:     General Alfresco settings, JVM settings, machine, etc.");
+		System.out.println(" search|index: Index settings (i.e. Lucene/Solr).");
 		System.exit(0);
 		
 	}

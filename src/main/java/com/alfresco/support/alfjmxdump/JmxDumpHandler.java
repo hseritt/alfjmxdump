@@ -40,12 +40,12 @@ public class JmxDumpHandler {
 			
 			for (String line : fileLines) {
 				if (
-						line.startsWith( "ldap.synchronization." ) 	|| 
+						line.startsWith( "ldap." ) 	|| 
 						line.startsWith( "synchronization." ) 		|| 
 						line.startsWith( "authentication." )			||
 						line.startsWith( "alfresco.authentication" )  ||
 						line.startsWith( "ntlm.authentication" )      ||
-						line.startsWith( "kerberos.authentication" )
+						line.startsWith( "kerberos." )
 					) 
 				{
 					template.put(line.split(" ")[0], line.split(" ")[0]);
@@ -53,7 +53,7 @@ public class JmxDumpHandler {
 			}
 		}
 		
-		else if (option.equals("search") || (option.equalsIgnoreCase("index"))) {
+		else if (option.equals("search") || (option.equals("index"))) {
 			
 			for (String line: fileLines) {
 				if (
@@ -65,6 +65,18 @@ public class JmxDumpHandler {
 				   )
 				{
 					template.put(line.split(" ")[0], line.split(" ")[0]);
+				}
+			}
+		}
+		
+		else if (option.equals("cache")) {
+			
+			for (String line : fileLines) {
+				if (
+						line.startsWith("cache.")
+				   )
+				{
+					template.put(line.split(" ")[0],  line.split(" ")[0]);
 				}
 			}
 		}
