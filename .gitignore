@@ -50,6 +50,5 @@ local.properties
 .recommenders/
 
 build-dist.sh
-dist
 target
 alfjmxdump*.jar
